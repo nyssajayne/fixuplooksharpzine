@@ -1,0 +1,12 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<div class="wrapper">
+    {% for link in links %}
+    <a href="{{ link.href }}">{{ link.text }}</a>
+    {% endfor %}
+
+    {{ content | safe }}
+</div>
+
+{% endblock %}

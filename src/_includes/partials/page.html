@@ -1,0 +1,12 @@
+{% for item in collections.pages %}
+    {% set title = item.data.title %}
+    {% set content = item.content %}
+    {% set barter = item.data.barter %}
+    <article>
+        <h1>{{ title }}</h1>
+        {% if barter %}
+        {% include "partials/barter.html" %}
+        {% endif %}
+        {{ content | safe }}
+    </article>
+{% endfor %}

@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<div class="zine-wrapper">
+    <header>fix up look sharp</header>
+    <nav>nav nav nav</nav>
+    <div class="content">
+        {% for item in collections.pages %}
+            <p>{{ item.data.title }}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+:root {
+    --dm-sans: 'DM Sans', Helvetica, sans-serif;
+    --league-script: 'League Script', cursive;
+    --orbitron: 'Orbitron', sans-serif;
+
+    --black: rgba(0, 0, 0, 0.87);
+    --white: #FFFFFC;
+
+    font-size: calc(1rem + 0.5vw);
+}
+
+.bg-primary-color {
+    background-color: var(--white);
+}
+
+.text-primary-color {
+    color: var(--black);
+}
+
+.text-primary-font {
+    font-family: var(--dm-sans);
+    font-weight: 300;
+}
+
+main {
+    display: grid;
+    min-height: 100svh;
+    place-items: center;
+}

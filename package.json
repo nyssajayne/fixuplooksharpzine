@@ -1,0 +1,17 @@
+{
+  "name": "fixuplooksharp",
+  "version": "1.0.0",
+  "description": "the corresponding website to the fix up, look sharp zine",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}

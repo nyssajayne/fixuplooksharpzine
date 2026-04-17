@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<div class="wrapper">
+    <img src="{{ image }}">
+    <div>
+        <h1>{{ flyer.title }}</h1>
+        <p>{{ flyer.copy }}</p>
+    </div>
+</div>
+{% endblock %}

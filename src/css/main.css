@@ -1,25 +1,35 @@
 :root {
     --dm-sans: 'DM Sans', Helvetica, sans-serif;
-    --league-script: 'League Script', cursive;
-    --orbitron: 'Orbitron', sans-serif;
 
     --black: rgba(0, 0, 0, 0.87);
     --white: #FFFFFC;
+
+    --dusk-blue: #464D77;
+    --soft-blush: #FFD9DA;
+    --yellow: #FBFF12;
+    --neon-pink: #FF206E;
+    --deep-walnut: #4C2E05;
+
 
     font-size: calc(1rem + 0.5vw);
 }
 
 .bg-primary-color {
-    background-color: var(--white);
+    background-color: var(--soft-blush);
 }
 
 .text-primary-color {
-    color: var(--black);
+    color: var(--dusk-blue);
+}
+
+.text-highlight-color {
+    color: var(--neon-pink);
 }
 
 .text-primary-font {
     font-family: var(--dm-sans);
     font-weight: 300;
+    letter-spacing: -5%;
 }
 
 main {

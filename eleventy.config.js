@@ -2,6 +2,8 @@ export default function (eleventyConfig) {
     eleventyConfig.setInputDirectory('src');
     eleventyConfig.setOutputDirectory('dist');
 
+    eleventyConfig.addPassthroughCopy('src/assets');
+
     eleventyConfig.addCollection('pages', (collection) => {
         return collection
             .getFilteredByGlob('./src/pages/*.md')

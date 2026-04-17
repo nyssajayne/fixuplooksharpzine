@@ -1,13 +1,24 @@
 {% extends 'layouts/base.html' %}
 
 {% block content %}
-<div class="zine-wrapper">
-    <header>fix up look sharp</header>
-    <nav>nav nav nav</nav>
-    <div class="content">
-        {% for item in collections.pages %}
-            <p>{{ item.data.title }}</p>
-        {% endfor %}
+<div class="happyhour-wrapper">
+    <div class="sewing-background-image">
+        <p class="text-size-small">{{ flyer.intro | safe }}</p>
+        <h1>{{ flyer.title | safe }}</h1>
+        {{ flyer.copy | safe }}
+    </div>
+    <div class="sewing-background-image">
+        <div class="text-size-small">
+            {{ content | safe }}
+        </div>
+        <div>
+            <h2>Prices</h2>
+            <ul>
+            {% for item in prices %}
+                <li><span class="alt">{{ item.alt | safe }}</span> <span class="price">{{ item.price }}</span></li>
+            {% endfor %}
+            </ul>
+        </div>
     </div>
 </div>
 {% endblock %}

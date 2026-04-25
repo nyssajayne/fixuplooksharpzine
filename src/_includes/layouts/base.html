@@ -3,15 +3,14 @@
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=League+Script&family=Orbitron&display=swap" rel="stylesheet">
-        <link href="/bundle.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cutive&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=League+Script&display=swap" rel="stylesheet">
+        <link href="{{ cssFile }}" rel="stylesheet">
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Fix Up Look Sharp | Mending Zine & Happy Hour</title>
     </head>
 
-    <body>
-        <main class="text-primary-color text-primary-font">
-            {% block content %}{% endblock %}
-        </main>
+    <body class="text-primary-color text-primary-font">
+        {% block content %}{% endblock %}
     </body>
 </html>

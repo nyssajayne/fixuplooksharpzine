@@ -2,10 +2,27 @@
 
 {% block content %}
 <div class="wrapper">
-    <img src="{{ image }}">
-    <div>
-        <h1>{{ flyer.title }}</h1>
-        <p>{{ flyer.copy }}</p>
-    </div>
+    <header class="lockup print-wrapper">
+        <h1><img src="/assets/lockup.svg" alt="Fix Up Look Sharp"></h1>
+        <h2 class="font-cutive">"mend and make friends"</h2>
+    </header>
+    <nav>
+        <ul>
+        {% for item in collections.pages %}
+            {% set title = item.data.title %}
+    
+            <li>{{ title }}</li>
+        {% endfor %}
+        </ul>
+    </nav>
+    <main>
+        {% include 'partials/page.html' %}
+    </main>
+    <footer>
+        <div class="print-wrapper">
+            <p>made with love in Brooklyn, NY</p>
+            <p>want something mended? visit fixuplooksharpzine.com</p>
+        </div>
+    </footer>
 </div>
 {% endblock %}

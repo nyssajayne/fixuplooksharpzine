@@ -1,4 +1,4 @@
-.happyhour-wrapper {
+main {
     align-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -7,18 +7,30 @@
     padding: 2rem 0;
 }
 
-.happyhour-wrapper > * {
+main > * {
     max-width: 20rem;
     text-align: center;
     place-content: center;
 }
 
 .sewing-background-image {
-    background-image: url("assets/border.svg");
+    background-image: url("/assets/border.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding: 1rem 1.5rem;
+}
+
+.bg-primary-color {
+    background-color: var(--soft-blush);
+}
+
+.text-primary-color {
+    color: var(--dusk-blue);
+}
+
+.text-highlight-color {
+    color: var(--neon-pink);
 }
 
 h1 {

@@ -1,5 +1,7 @@
 :root {
     --dm-sans: 'DM Sans', Helvetica, sans-serif;
+    --league-script: 'League Script', cursive;
+    --cutive: 'Cutive', Courier, monotype;
 
     --black: rgba(0, 0, 0, 0.87);
     --white: #FFFFFC;
@@ -10,20 +12,35 @@
     --neon-pink: #FF206E;
     --deep-walnut: #4C2E05;
 
+    --default-font-size: calc(1rem + 0.5vw);
 
-    font-size: calc(1rem + 0.5vw);
+
+    font-size: var(--default-font-size);
+}
+
+.font-dm-sans {
+    font-family: var(--dm-sans);
+    font-weight: 300;
+    letter-spacing: -5%;
+}
+
+.font-league-script {
+    font-family: var(--league-script);
+    font-size: 1.5em;
+    letter-spacing: normal;
+}
+
+.font-cutive {
+    font-family: var(--cutive);
+    letter-spacing: normal;
 }
 
 .bg-primary-color {
-    background-color: var(--soft-blush);
+    background-color: var(--white);
 }
 
 .text-primary-color {
-    color: var(--dusk-blue);
-}
-
-.text-highlight-color {
-    color: var(--neon-pink);
+    color: var(--black);
 }
 
 .text-primary-font {
@@ -36,4 +53,8 @@ main {
     display: grid;
     min-height: 100svh;
     place-items: center;
+}
+
+strong {
+    font-weight: 600;
 }

@@ -1,6 +1,7 @@
 ---
 title: 'Fix Up, Look Sharp! | Zine & Happy Hour'
 layout: 'layouts/home.html'
+cssFile: 'index.css'
 links: [
     {
         text: 'Zine',
@@ -11,4 +12,4 @@ links: [
         href: '/happyhour'
     }
 ]
----
+--- 

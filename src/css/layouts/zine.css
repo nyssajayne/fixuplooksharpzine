@@ -5,6 +5,10 @@ header {
     top: 0;
 }
 
+header img {
+    width: 10rem;
+}
+
 nav {
     grid-area: nav;
     padding: 1rem;
@@ -19,6 +23,15 @@ nav li {
     line-height: 1;
 }
 
+article ul,
+article ol {
+    padding: 0 0 0 1rem;
+}
+
+article ol li::marker {
+    font-family: var(--cutive);
+}
+
 .wrapper .content {
     grid-area: content;
 }
@@ -27,12 +40,30 @@ h1 {
     font-size: 1.5rem;
 }
 
+article:has(.flyer) h1 {
+    display: none;
+}
+
 h2 {
     font-size: 1.2rem;
 }
 
-p {
+article > * {
     margin-bottom: 1rem;
+}
+
+article > *:last-of-type:not(:has(+ *)) {
+    margin-bottom: 0;
+}
+
+a, a:visited {
+    color: var(--neon-pink);
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: var(--yellow);
+    text-decoration: underline;
 }
 
 .barter p {
@@ -48,8 +79,8 @@ p {
     background-image: linear-gradient(
         to bottom,
         transparent,
-        transparent 98%,
-        var(--black) 98%);
+        transparent calc(100% - 2px),
+        var(--black) calc(100% - 2px));
     background-size: 100% 1.4rem;
     line-height: 1;
     flex: 1;
@@ -63,6 +94,11 @@ p {
     margin: 0 auto;
 }
 
+footer {
+    display: none;
+    text-align: center;
+}
+
 article {
     min-height: 100dvh;
     max-width: 60ch;
@@ -71,6 +107,31 @@ article {
 
 article li {
     line-height: calc(1em + 0.5rem);
+}
+
+article img {
+    margin: 1rem;
+    shape-margin: 5%;
+}
+
+article:has(blockquote) {
+    text-align: center;
+
+    h1 {
+        display: none;
+    }
+
+    blockquote p {
+        font-family: var(--cutive);
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+aside {
+    border: 1px dashed var(--black);
+    clear: both;
+    padding: 1rem;
 }
 
 @media (orientation: landscape) {
@@ -101,6 +162,7 @@ article li {
     }
 
     footer {
+        display: block;
         grid-area: footer;
     }
 
@@ -123,7 +185,7 @@ article li {
             "page5"
     }
 
-    article, header, footer {
+    article, header, footer, .flyer {
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -170,5 +232,9 @@ article li {
             var(--black) 95%);
         background-size: 100% 1rem;
         print-color-adjust: exact;
+    }
+
+    .no-print {
+        display: none;
     }
 }

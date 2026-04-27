@@ -1,7 +1,6 @@
 ---
 title: "Do I Need a Sewing Machine?"
-pageNo: 9
-printContent: ''
+pageNo: 10
 barter: false
 ---
 If you're just fixing hems and replacing buttons, you do not need a sewing machine.  They're heavy, I won't lie to you.
@@ -10,4 +9,6 @@ However, I do get asked quite often what kind of sewing machine I recommend.  Fo
 
 But before going out to purchase a new machine, I would definitely check in with family or friends to see if they have a machine they'd be willing to loan or give you.  A sewing machine will often unlock some stories.
 
-**Bonus tip**, if you acquire a machine without a manual, you can google "\<machine name\> \<model number\> pdf".  Someone will have uploaded one.
+<aside>
+    <p><strong>Bonus tip</strong>, if you acquire a machine without a manual, you can google "[machine name] [model number] pdf".  Someone will have uploaded one.</p>
+</aside>

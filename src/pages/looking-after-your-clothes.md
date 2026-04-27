@@ -1,13 +1,12 @@
 ---
 title: "Looking after your clothes"
-pageNo: 7
-printContent: ''
+pageNo: 3
 barter: false
 ---
 Rewearing your clothes is a great way to keep you looking good and to avoid the clothing filled landfills.
 
 ## Launder with love
-Get your hands on a clothes horse and avoid the tumble dryer.  For all other laundry advice, the r/laundry subreddit is unmatched.
+Get your hands on a clothes horse and avoid the tumble dryer.  For all other laundry advice, the [r/laundry](https://www.reddit.com/r/laundry/) subreddit is unmatched.
 
 ## Tailor to fit
 Make friends with your local tailor and get those alterations done.  Clothes that fit properly don’t wear out as fast.  This is also a good chance to pre-mend clothes, like adding denim patches on the inner thighs of jeans.

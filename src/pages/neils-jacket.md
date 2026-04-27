@@ -1,7 +1,6 @@
 ---
 title: "Neil's Jacket"
-pageNo: 8
-printContent: ''
+pageNo: 15
 barter:
     iAltered: "Neil's Jacket"
     inReturn: "Neil promised to stop asking me to fix his jacket."

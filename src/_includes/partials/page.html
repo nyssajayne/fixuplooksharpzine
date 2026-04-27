@@ -4,12 +4,10 @@
     {% set barter = item.data.barter %}
     {% set orderNo = loop.index %}
     <article data-order="page-{{ orderNo }}">
-        <div class="print-wrapper">
-            <h1 class="font-cutive">{{ title }}</h1>
-            {% if barter %}
-            {% include "partials/barter.html" %}
-            {% endif %}
-            {{ content | safe }}
-        </div>
+        <h1 class="font-cutive">{{ title }}</h1>
+        {% if barter %}
+        {% include "partials/barter.html" %}
+        {% endif %}
+        {{ content | safe }}
     </article>
 {% endfor %}

@@ -49,12 +49,6 @@
     letter-spacing: -5%;
 }
 
-main {
-    display: grid;
-    min-height: 100svh;
-    place-items: center;
-}
-
 strong {
     font-weight: 600;
 }

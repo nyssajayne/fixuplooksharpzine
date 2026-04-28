@@ -3,18 +3,9 @@
 {% block content %}
 <div class="wrapper">
     <header class="lockup print-wrapper">
-        <h1><img src="/assets/lockup.svg" alt="Fix Up Look Sharp"></h1>
+        <h1>{% include 'partials/svg/lockup.svg' %}</h1>
         <h2 class="font-cutive">"mend and make friends"</h2>
     </header>
-    <nav>
-        <ul>
-        {% for item in collections.pages %}
-            {% set title = item.data.title %}
-    
-            <li>{{ title }}</li>
-        {% endfor %}
-        </ul>
-    </nav>
     <main>
         {% include 'partials/page.html' %}
     </main>

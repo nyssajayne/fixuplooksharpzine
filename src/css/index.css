@@ -1,0 +1,44 @@
+body {
+    background-color: var(--soft-blush);
+}
+
+main {
+    align-items: center;
+    color: var(--dusk-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    margin: 0 auto;
+    width: 75vw;
+    max-width: 600px;
+    min-height: 100dvh;
+}
+
+.links {
+    justify-content: center;
+    display: flex;
+    font-size: 2rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+a, a:visited {
+    color: var(--neon-pink);
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+@media (orientation: landscape) {
+    main {
+        width: 50vw;
+    }
+
+    .links {
+        font-size: 1.5rem;
+    }
+}

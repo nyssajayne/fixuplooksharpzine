@@ -5,7 +5,9 @@ header {
     top: 0;
 }
 
-header img {
+header svg {
+    color: var(--black);
+    margin: 0 auto;
     width: 10rem;
 }
 

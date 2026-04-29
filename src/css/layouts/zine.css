@@ -102,6 +102,8 @@ footer {
 }
 
 article {
+    clear: both;
+    margin: 0 auto;
     max-width: 60ch;
     padding: 2rem;
 }

@@ -102,7 +102,6 @@ footer {
 }
 
 article {
-    min-height: 100dvh;
     max-width: 60ch;
     padding: 2rem;
 }

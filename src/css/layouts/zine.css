@@ -173,6 +173,11 @@ aside {
         grid-area: footer;
     }
 
+    footer img {
+        margin: 0 auto 1rem;
+        width: 25%;
+    }
+
     .wrapper {
         display: grid;
         grid: "footer"

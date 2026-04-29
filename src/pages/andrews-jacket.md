@@ -5,7 +5,7 @@ barter:
     iAltered: "Andrew's Jacket"
     inReturn: "Andrew sharpened my kitchen knives"
 ---
-<img src="/assets/jacket.svg" alt="Andrew's black denim jacket"> 
+<img src="/assets/jacket.svg" alt="Andrew's black denim jacket" style="width: 80%; margin: 0 auto"> 
 
 The jacket is a black denim Levi’s jacket. Andrew always wore it with the sleeves rolled up, which meant that holes had developed where the fabric was folded. It was an easy fix, but it did require a sewing machine and specialty denim needles (handsewing denim would be rough).
 

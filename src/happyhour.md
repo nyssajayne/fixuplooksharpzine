@@ -14,14 +14,14 @@ flyer:
     copy: "<p>at<br>
         <strong class=\"text-highlight-color\">The Starlight Tavern</strong><br>
         596 Grand St, Brooklyn, 11211 (<a href=\"https://maps.app.goo.gl/onGTs5E6V1sq8TnGA\">see map</a>)<br>
-        between <strong class=\"text-highlight-color\">5-7pm</strong> on <strong class=\"text-highlight-color\">Thursday 4/23</strong>.</p>
+        between <strong class=\"text-highlight-color\">5-7pm</strong> on <strong class=\"text-highlight-color\">Thursday 4/30</strong>.</p>
 
         <p>Nyssa will fix your clothes<br>
         while Leah fixes your drinks!
 
-        <p>Simple alterations while-u-wait,<br>
-        more complicated alterations available<br>
-        for pickup on Thursday 4/30.</p> 
+        <p>Simple alterations while-u-wait,
+        more complicated alterations available
+        for pickup on Thursday 5/7.</p> 
 
         <p class=\"text-size-small\">Cash or Venmo only.</p>"
 prices: [
@@ -40,6 +40,10 @@ prices: [
     {
         alt: "Adjust and hem<br><span class=\"text-size-small\">(eg change length of a sleeve or pant leg)</span>",
         price: "$28+"
+    },
+    {
+        alt: "Patch a tear<br><span class=\"text-size-small\">(consultation required, price depends on size and visibility of mend)</span>",
+        price: "$25+"
     },
     {
         alt: "Futher alterations",

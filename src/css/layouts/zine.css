@@ -42,7 +42,7 @@ h1 {
     font-size: 1.5rem;
 }
 
-article:has(.flyer) h1 {
+article:has(.image-only) h1 {
     display: none;
 }
 
@@ -136,6 +136,10 @@ aside {
     padding: 1rem;
 }
 
+.print-only {
+    display: none;
+}
+
 @media (orientation: landscape) {
     .wrapper {
         /*display: grid;*/
@@ -177,17 +181,27 @@ aside {
 
     main {
         display: grid;
-        grid: "page8"
+        grid: "pagea"
+            "pageb"
+            "page16"
             "page1"
             "page2"
-            "page7"
+            "page15"
+            "page14"
             "page3"
-            "page6"
             "page4"
+            "page13"
+            "page12"
             "page5"
+            "page6"
+            "page11"
+            "page10"
+            "page7"
+            "page8"
+            "page9"
     }
 
-    article, header, footer, .flyer {
+    article, header, footer, .image-only, .print-only {
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -226,13 +240,47 @@ aside {
         grid-area: page8;
     }
 
+    article[data-order="page-9"] {
+        grid-area: page9;
+    }
+
+    article[data-order="page-10"] {
+        grid-area: page10;
+    }
+
+    article[data-order="page-11"] {
+        grid-area: page11;
+    }
+
+    article[data-order="page-12"] {
+        grid-area: page12;
+    }
+
+    article[data-order="page-13"] {
+        grid-area: page13;
+    }
+
+    article[data-order="page-14"] {
+        grid-area: page14;
+    }
+
+    article[data-order="page-15"] {
+        grid-area: page15;
+    }
+
+    article[data-order="page-16"] {
+        grid-area: page16;
+    }
+
+    article[data-order="page-a"] {
+        grid-area: pagea;
+    }
+
+    article[data-order="page-b"] {
+        grid-area: pageb;
+    }
+
     .i-received {
-        background-image: linear-gradient(
-            to bottom,
-            transparent,
-            transparent 95%,
-            var(--black) 95%);
-        background-size: 100% 1rem;
         print-color-adjust: exact;
     }
 

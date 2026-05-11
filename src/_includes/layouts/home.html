@@ -9,6 +9,13 @@
         {% endfor %}
     </section>
     {{ content | safe }}
+    <section class="socials">
+        {% for link in socials %}
+        <a href="{{ link.href }}">
+        {{ link.icon | safe }}
+            {{ link.text }}</a>
+        {% endfor %}
+    </section>
 </main>
 
 {% endblock %}

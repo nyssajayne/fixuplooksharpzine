@@ -1,0 +1,23 @@
+<p class="text-size-small">
+{% for line in intro %}
+        {{ line }}{% if not loop.last %}<br>{% endif %}
+{% endfor %}
+</p>
+
+<p class="text-size-small">Bring your clothes to the...</p>
+
+<h1>Mend and Make<br>
+<span class="text-highlight-color">Happy Hour</span>
+</h1>
+
+<p>at<br>
+<strong class="text-highlight-color">{{ where }}</strong><br>
+{{ address }} (<a href="{{ location }}">see map</a>)<br>
+between <strong class="text-highlight-color">{{ time }}</strong> on <strong id="thisweek" class="text-highlight-color">Thursdays</strong>.</p>
+
+<p>Nyssa will fix your clothes<br>
+while {{ bartender }} fixes your drinks!
+
+<p>Simple alterations while-u-wait, more complicated alterations available for pickup on <span id="nextweek">the following Thursday</span>.</p>
+
+<p class="text-size-small">Cash or Venmo only.</p>

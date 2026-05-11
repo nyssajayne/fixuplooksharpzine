@@ -3,6 +3,7 @@ export default function (eleventyConfig) {
     eleventyConfig.setOutputDirectory('dist');
 
     eleventyConfig.addPassthroughCopy('src/assets');
+    eleventyConfig.addPassthroughCopy('src/js');
 
     eleventyConfig.addCollection('pages', (collection) => {
         return collection

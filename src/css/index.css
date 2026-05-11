@@ -15,12 +15,41 @@ main {
     min-height: 100dvh;
 }
 
+.lockup {
+    margin-top: auto;
+}
+
 .links {
     justify-content: center;
     display: flex;
     font-size: 2rem;
     gap: 1rem;
     width: 100%;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-bottom: .5rem;
+    width: 100%;
+}
+
+.socials a {
+    align-items: center;
+    display: inline-flex;
+    gap: .3rem;
+}
+
+.socials .icon {
+    width: auto;
+    fill: var(--neon-pink);
+    height: 1.2rem;
+}
+
+.socials a:hover .icon,
+.socials a:active .icon {
+    fill: var(--yellow);
 }
 
 a, a:visited {

@@ -3,22 +3,12 @@
 {% block content %}
 <main>
     <div class="sewing-background-image">
-        <p class="text-size-small">{{ flyer.intro | safe }}</p>
-        <h1>{{ flyer.title | safe }}</h1>
-        {{ flyer.copy | safe }}
+        {% include "partials/flyer.html" %}
     </div>
     <div class="sewing-background-image">
-        <div class="text-size-small">
-            {{ content | safe }}
-        </div>
-        <div>
-            <h2>Prices</h2>
-            <ul>
-            {% for item in prices %}
-                <li><span class="alt">{{ item.alt | safe }}</span> <span class="price">{{ item.price }}</span></li>
-            {% endfor %}
-            </ul>
-        </div>
+        {% include "partials/prices.html" %}
     </div>
+
+    <script src="/js/happyhour.js"></script>
 </main>
 {% endblock %}

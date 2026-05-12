@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<div class="wrapper">
+    <main>
+        <a href="/" class="lockup">{% include 'partials/svg/lockup-landscape.svg' %}</a>
+        {% include 'partials/prices.html' %}
+    </main>
+    {% include 'partials/socials.html' %}
+</div>
+{% endblock %}

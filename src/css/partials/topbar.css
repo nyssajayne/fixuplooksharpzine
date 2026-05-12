@@ -1,0 +1,19 @@
+aside {
+    background-color: var(--neon-pink);
+    padding: .3rem;
+    text-align: center;
+    width: 100vw;
+}
+
+aside p {
+    color: var(--soft-blush);
+    margin-bottom: 0;
+}
+
+aside p a, aside p a:visited {
+    color: var(--yellow);
+}
+
+aside p a:hover, aside p a:active {
+    color: var(--dusk-blue);
+}

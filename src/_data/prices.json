@@ -1,0 +1,36 @@
+{
+    "prices": [
+        {
+            "alt": "Reattach button<br><span class=\"text-size-small\">(byo button)</span>",
+            "price": "$6"
+        },
+        {
+            "alt": "Replace button",
+            "price": "$10+"
+        },
+        {
+            "alt": "Leather holepunch <br><span class=\"text-size-small\">(belts, bags, shoes, etc)</span>",
+            "price": "$6+"
+        },
+        {
+            "alt": "Mend seams<br><span class=\"text-size-small\">(eg dropped hems)</span>",
+            "price": "$12+"
+        },
+        {
+            "alt": "Adjust and hem<br><span class=\"text-size-small\">(eg change length of a sleeve or pant leg)</span>",
+            "price": "$28+"
+        },
+        {
+            "alt": "Patch a hole<br><span class=\"text-size-small\">(consultation required, price depends on size and visibility of mend)</span>",
+            "price": "$25+"
+        },
+        {
+            "alt": "Replace a lining",
+            "price": "$100+"
+        },
+        {
+            "alt": "Futher alterations",
+            "price": "market price"
+        }
+    ]
+}

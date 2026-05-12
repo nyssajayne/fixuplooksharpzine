@@ -1,0 +1,29 @@
+.prices h2, .prices h3 {
+    text-align: center;
+}
+
+.prices h2 {
+    margin-bottom: 1rem;
+}
+
+.prices ul {
+    padding: 0;
+}
+
+.prices li {
+    align-items: center;
+    border-bottom: 1px dashed var(--yellow);
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.2;
+    padding: .75rem;
+    text-align: left;
+}
+
+.prices li:last-child {
+    border: 0;
+}
+
+.prices .alt {
+    flex-basis: 60%;
+}

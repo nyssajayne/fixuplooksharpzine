@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<div class="wrapper">
+    {% include 'partials/topbar.html' %}
+    <main>
+        <a href="/" class="lockup">{% include 'partials/svg/lockup-landscape.svg' %}</a>
+        {% set flyer = flyers.starlight %}
+        {% include 'partials/flyer.html' %}
+        {{ content | safe }}
+    </main>
+    {% include 'partials/socials.html' %}
+</div>
+{% endblock %}

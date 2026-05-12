@@ -2,13 +2,9 @@
 
 {% block content %}
 <main>
-    <div class="sewing-background-image">
-        {% include "partials/flyer.html" %}
-    </div>
-    <div class="sewing-background-image">
-        {% include "partials/prices.html" %}
-    </div>
-
+    {% set flyer = flyers.starlight %}
+    {% include "partials/flyer.html" %}
+    {% include "partials/prices.html" %}
     <script src="/js/happyhour.js"></script>
 </main>
 {% endblock %}

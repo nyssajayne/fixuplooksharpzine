@@ -1,0 +1,7 @@
+<section class="socials">
+    {% for link in socials.socials %}
+    <a href="{{ link.href }}" target="_blank">
+    {{ link.icon | safe }}
+        {{ link.text }}</a>
+    {% endfor %}
+</section>

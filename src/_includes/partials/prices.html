@@ -1,11 +1,12 @@
-<div class="text-size-small">
-    {{ content | safe }}
-</div>
-<div>
-    <h2>Prices</h2>
-    <ul>
-    {% for item in prices %}
-        <li><span class="alt">{{ item.alt | safe }}</span> <span class="price">{{ item.price }}</span></li>
-    {% endfor %}
-    </ul>
-</div>
+<section class="prices sewing-background-image">
+    <div>
+        <h2>Prices</h2>
+        <h3 class="text-size-small">{{ about.title }}</h3>
+        <p class="text-size-small">{{ about.copy }}</p>
+        <ul>
+        {% for item in prices.prices %}
+            <li><span class="alt">{{ item.alt | safe }}</span> <span class="price">{{ item.price }}</span></li>
+        {% endfor %}
+        </ul>
+    </div>
+</section>

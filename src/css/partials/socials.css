@@ -1,0 +1,18 @@
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3em 1em;
+    justify-content: center;
+    width: 100%;
+}
+
+.socials a {
+    align-items: center;
+    display: inline-flex;
+    gap: .3em;
+}
+
+.socials .icon {
+    width: auto;
+    height: 1.2em;
+}

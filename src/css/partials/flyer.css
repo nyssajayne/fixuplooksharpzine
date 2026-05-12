@@ -1,0 +1,13 @@
+.flyer {
+    text-align: center;
+}
+
+.flyer h1 {
+    font-weight: 300;
+    line-height: .25;
+    margin: 2rem 0 1rem;
+}
+
+.flyer h1 > * {
+    font-weight: inherit;
+}

@@ -1,0 +1,78 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+    .mirrorball {
+        height: 100vw;
+        position: relative;
+        width: 100vw;
+    }
+
+    .vertical {
+        background-color: blueviolet;
+        border: 2px solid black;
+        border-radius: 50%;
+        position: absolute;
+        inset: 0;
+    }
+
+    .vertical.flat:nth-child(2) {
+        background-color: yellowgreen;
+        inset: 0 6.25%;
+    }
+
+    .vertical.flat:nth-child(3) {
+        background-color: powderblue;
+        inset: 0 12.5%;
+    }
+
+    .vertical.flat:nth-child(4) {
+        background-color: lightcoral;
+        inset: 0 18.75%;
+    }
+
+    .vertical.flat:nth-child(5) {
+        background-color: cornsilk;
+        inset: 0 25%;
+    }
+
+    .vertical.flat:nth-child(6) {
+        background-color: turquoise;
+        inset: 0 31.25%;
+    }
+
+    .vertical.flat:nth-child(7) {
+        background-color: whitesmoke;
+        inset: 0 37.5%;
+    }
+
+    .vertical.flat:nth-child(8) {
+        background-color: lavenderblush;
+        inset: 0 43.75%;
+    }
+
+    .vertical.flat:nth-child(9) {
+        background-color: lawngreen;
+        inset: 0 50%;
+    }
+</style>
+<div class="wrapper">
+    <h1>experimenting with a sphere</h1>
+
+    <div class="mirrorball">
+        <div class="vertical flat" data-ring="1"></div>
+        <div class="vertical flat" data-ring="2"></div>
+        <div class="vertical flat" data-ring="3"></div>
+        <div class="vertical flat" data-ring="4"></div>
+        <div class="vertical flat" data-ring="5"></div>
+        <div class="vertical flat" data-ring="6"></div>
+        <div class="vertical flat" data-ring="7"></div>
+        <div class="vertical flat" data-ring="8"></div>
+        <div class="vertical flat" data-ring="9"></div>
+    </div>
+</div>
+{% endblock %}

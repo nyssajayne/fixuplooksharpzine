@@ -1,0 +1,20 @@
+{
+    "services": [
+        {
+            "service": "Tailoring services",
+            "desc": "Let me mend and alter your favourite clothes so that they can work for you."
+        },
+        {
+            "service": "Group parties",
+            "desc": "Get your crew together, I can demo basic fixes (and, of course, tailor your clothes)."
+        },
+        {
+            "service": "Finishing services",
+            "desc": "Are you crafty yourself but want to skip the boring stuff? I can finish and block your knitted and crochet garments."
+        },
+        {
+            "service": "Sample making & pattern testing",
+            "desc": "I sew, knit and crochet, let's make your next trunk show or sewing pattern look good."
+        }
+    ]
+}

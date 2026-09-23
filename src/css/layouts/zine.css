@@ -1,3 +1,52 @@
+:root {
+    --dm-sans: 'DM Sans', Helvetica, sans-serif;
+    --league-script: 'League Script', cursive;
+    --cutive: 'Cutive', Courier, monotype;
+
+    --black: rgba(0, 0, 0, 0.87);
+    --white: #FFFFFC;
+}
+
+.font-dm-sans {
+    font-family: var(--dm-sans);
+    font-weight: 300;
+    letter-spacing: -5%;
+}
+
+.font-league-script {
+    font-family: var(--league-script);
+    font-size: 1.5em;
+    letter-spacing: normal;
+}
+
+.font-cutive {
+    font-family: var(--cutive);
+    letter-spacing: normal;
+}
+
+.bg-primary-color {
+    background-color: var(--white);
+}
+
+.text-primary-color {
+    color: var(--black);
+}
+
+.text-primary-font {
+    font-family: var(--dm-sans);
+    font-weight: 300;
+    letter-spacing: -5%;
+}
+
+strong {
+    font-weight: 600;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
 header {
     background-color: var(--white);
     grid-area: header;

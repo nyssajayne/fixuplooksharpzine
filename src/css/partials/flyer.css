@@ -1,13 +1,15 @@
-.flyer {
-    text-align: center;
+.large-font-size {}
+
+.border {    
+    transform: rotate(-3deg) translateY(-.5rem);
 }
 
-.flyer h1 {
-    font-weight: 300;
-    line-height: .25;
-    margin: 2rem 0 1rem;
+.flyer h2 {
+    font-weight: 900;
+    line-height: .8;
+    text-transform: uppercase;
 }
 
-.flyer h1 > * {
+.flyer h2 > * {
     font-weight: inherit;
 }

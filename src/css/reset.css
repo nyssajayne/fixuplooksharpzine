@@ -34,7 +34,7 @@ input::placeholder {
   opacity: 1;
 }
 
-a, p, h2, h3, h4, h5, h6, button, aside, section {
+a, p, h2, h3, h4, h5, h6, button, aside, section, details, summary {
   line-height: calc(1em + 0.5rem);
   overflow-wrap: break-word;
 }

@@ -1,20 +1,29 @@
 {
     "services": [
         {
-            "service": "Tailoring services",
-            "desc": "Let me mend and alter your favourite clothes so that they can work for you."
+            "service": "Tailoring, Alterations + Mending",
+            "keyword": "tailoring",
+            "desc": "Let me mend and alter your favourite clothes so that they can work for you.  Check out my price list, come visit me at a happy hour, or get in touch to get all your questions answered."
         },
         {
             "service": "Group parties",
-            "desc": "Get your crew together, I can demo basic fixes (and, of course, tailor your clothes)."
+            "keyword": "groupParties",
+            "desc": "In the style of our parents' tupperware parties, get your crew together and we'll fix some things! I'll demo some basic fixes (and, of course, tailor your clothes).  Learn more!"
         },
         {
             "service": "Finishing services",
-            "desc": "Are you crafty yourself but want to skip the boring stuff? I can finish and block your knitted and crochet garments."
+            "keyword": "finishing",
+            "desc": "Are you crafty yourself but want to skip the boring stuff? I can finish and block your knitted and crochet garments and wind your skeins of yarn.  Check out the prices page for more."
+        },
+        {
+          "service": "Sewing Machine Assessment",
+          "keyword": "sewingMachine",
+          "desc": "Do you need a hand confronting your sewing machine?  I provide inexpensive cleanings and servicing then I'll show you how to make the most out of your machine."
         },
         {
             "service": "Sample making & pattern testing",
-            "desc": "I sew, knit and crochet, let's make your next trunk show or sewing pattern look good."
+            "keyword": "sampleMaking",
+            "desc": "I sew, knit and crochet, let's make your next trunk show or sewing pattern look good!  Contact me directly to get started."
         }
     ]
 }

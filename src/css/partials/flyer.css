@@ -1,9 +1,3 @@
-.large-font-size {}
-
-.border {    
-    transform: rotate(-3deg) translateY(-.5rem);
-}
-
 .flyer h2 {
     font-weight: 900;
     line-height: .8;

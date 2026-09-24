@@ -1,13 +1,13 @@
-<h2>Mend & Make<br>
+<h2 class="bg-color-one border-color-three">Mend & Make<br>
 <span class="text-highlight-color">Happy Hour</span>
 </h2>
 
 <p>at<br>
-<strong class="text-highlight-color">{{ flyer.where }}</strong><br>
+<strong class="text-color-three">{{ flyer.where }}</strong><br>
 {{ flyer.address }} (<a href="{{ location }}">see map</a>)<br>
 
 {% set week = 0 %}
-between <strong class="text-highlight-color">{{ flyer.time }}</strong> on <strong id="thisweek" class="text-highlight-color">{{ happyhour.whichDate(flyer.day, week) }}</strong>.</p>
+between <strong class="text-color-three">{{ flyer.time }}</strong> on <strong id="thisweek" class="text-color-three">{{ happyhour.whichDate(flyer.day, week) }}</strong>.</p>
 
 <p>Nyssa will fix your clothes<br>
 while {{ flyer.bartender }} fixes your drinks!</p>

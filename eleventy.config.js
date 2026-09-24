@@ -10,6 +10,8 @@ export default function (eleventyConfig) {
             .getFilteredByGlob('./src/pages/*.md')
             .sort((a, b) => (Number(a.data.pageNo) > Number(b.data.pageNo) ? 1 : -1));
     });
+
+  eleventyConfig.addWatchTarget("./src/css/");
 }
 
 export const config = {

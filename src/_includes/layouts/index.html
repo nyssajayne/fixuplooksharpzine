@@ -4,58 +4,48 @@
 <div class="wrapper">
     {% include 'partials/topbar.html' %}
     <div class="patchwork">
-        <div class="block leopard-print-bg neon-pink-a yellow-b"></div>
-        <div class="block plaid-bg tropical-mint-a yellow-b"></div>
-        <div class="block polka-dots-bg midnight-blue-a white-b"></div>
-        <div class="block ferns-bg tropical-mint-a midnight-blue-b"></div>
-        <div class="block check-bg white-a soft-blush-b"></div>
+        <div class="patterned-bg leopard-print-bg neon-pink-a yellow-b"></div>
+        <div class="patterned-bg plaid-bg tropical-mint-a yellow-b"></div>
+        <div class="patterned-bg polka-dots-bg midnight-blue-a white-b"></div>
+        <div class="patterned-bg ferns-bg tropical-mint-a midnight-blue-b"></div>
+        <div class="patterned-bg check-bg white-a soft-blush-b"></div>
     </div>
      <div class="patchwork">
-        <div class="block stripe-bg midnight-blue-a neon-pink-b"></div>
-        <div class="block flowers-bg soft-blush-a neon-pink-b"></div>
-        <div class="block chevron-bg yellow-a tropical-mint-b"></div>
-        <div class="block plaid-bg neon-pink-a yellow-b"></div>
-        <div class="block polka-dots-bg white-a tropical-mint-b"></div>
+        <div class="patterned-bg stripe-bg midnight-blue-a neon-pink-b"></div>
+        <div class="patterned-bg flowers-bg soft-blush-a neon-pink-b"></div>
+        <div class="patterned-bg chevron-bg yellow-a tropical-mint-b"></div>
+        <div class="patterned-bg plaid-bg neon-pink-a yellow-b"></div>
+        <div class="patterned-bg polka-dots-bg white-a tropical-mint-b"></div>
     </div>
     <header>
         <a href="/" class="lockup">{% include 'partials/logo.html' %}</a>
     </header>
-    <main> 
-        <section class="content about">
-            <div class="border"></div>
-            <h2>Need a crafty friend?  Look no further!</h2>
-            <p>I'm Nyssa, and I am here to help you with all those buttons you need sewing on, trousers that need hemming, holes in your clothes that need patching... I can even take a look at your sewing machine and finish your hand made sweaters.</p>
+    <main>
+        <section class="content intro">
+            <h2 class="bg-color-one border-color-three box-shadow-color-one">Need a crafty friend?  Look no further!</h2>
+            <p class="bg-color-one border-color-five box-shadow-color-one">I'm Nyssa, and I am here to help you with all those buttons you need sewing on, trousers that need hemming, holes in your clothes that need patching... I can even take a look at your sewing machine and finish your hand made sweaters.</p>
+            <div class="rotate-left kookyBorder border-color-four"></div>
+            <div class="rotate-right kookyBorder border-color-six"></div>
         </section>
 
-        <section class="content tailoring">
-            <div class="border"></div>
-            <h2>Tailoring Services</h2>
-            <p>I believe your clothes should fit you and not the other way around.  See my list of services and prices, and if what you need isn't on there, don't despair!  Come chat with me about what you need at one of my happy hours, or email me to talk further.</p>
-        </section>
-
-        <section class="content groupevents">
-            <div class="border"></div>
-            <h2>Group Events</h2>
-            <p>You bring the friends and the clothes, I can bring the needle and thread! </p>
-        </section>
-
-        <section class="content knitcrochet">
-            <div class="border"></div>
-            <h2>Knit & Crochet</h2>
-            <p>Finishing (seaming, attaching notions) - blocking - sample knitting</p>
-        </section>
-
-        <section class="content servicing">
-            <div class="border"></div>
-            <h2>Sewing Machine Assessment</h2>
-            <p>If your sewing machine isn't behaving how you need, but you're not sure that it's actually broken, I can take a look.  I provide inexpensive cleanings and light servicing, plus I can refer you to friendly experts should your machine require further attention.  Once I'm done, I can walk you through how to get the most out of your machine.</p>
-        </section>
-
-        <section class="content flyer">
-            <div class="border"></div>
+        <section class="content larger-font-size flyer">
             {% set flyer = flyers.starlight %}
             {% include 'partials/flyer.html' %}
             {{ content | safe }}
+            <div class="rotate-right kookyBorder border-color-four"></div>
+            <div class="rotate-left kookyBorder border-color-three"></div>
+        </section>
+
+        <section class="content services">
+            <h2 class="bg-color-one border-color-three">Services</h2>
+            {% for service in services.services %}
+            <details name="services" class="{{ service.keyword }}">
+                <summary class="service-summary border-color-five">{{ service.service }}</summary>
+                <p>{{ service.desc }}</p>
+            </details>
+            {% endfor %}
+            <div class="rotate-right kookyBorder border-color-four"></div>
+            <div class="rotate-left kookyBorder border-color-three"></div>
         </section>
     </main>
     {% include 'partials/socials.html' %}

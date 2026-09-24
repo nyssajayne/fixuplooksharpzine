@@ -4,8 +4,11 @@
         <span class="large-font-size rotate-right">Look Sharp</span>
     </div>
     <div class="row">
-        <span class="small-font-size">Alterations</span>
-        <span class="small-font-size">Customizations</span>
-        <span class="small-font-size">Mending</span>
+        <span class="small-font-size rotate-left">{{ subheading }}</span>
+    </div>
+    <div class="row">
+    {% for item in keywords %}
+        <span class="small-font-size {% if loop.last %}rotate-right{% endif %}">{{ item }}</span>
+        {% endfor %}
     </div>
 </h1>

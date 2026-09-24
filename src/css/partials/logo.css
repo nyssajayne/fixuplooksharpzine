@@ -30,14 +30,6 @@
     width: auto;
 }
 
-.logo .rotate-left {
-    transform: rotate(-2.26deg);
-}
-
-.logo .rotate-right {
-    transform: rotate(1.42deg);
-}
-
 .logo .large-font-size {
     font-size: 2.4rem;
 }

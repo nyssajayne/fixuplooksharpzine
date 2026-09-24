@@ -13,8 +13,6 @@
     --border-width: .3rem;
     --box-shadow-width: .1rem;
 
-    --bg-size: 1.5rem;
-
     --default-font-size: calc(1rem + 0.5vw);
 
     font-size: var(--default-font-size);
@@ -86,6 +84,10 @@
 }
 
 /*** white ***/
+.bg-color-six {
+    background-color: var(--white);
+}
+
 .border-color-six {
     border: var(--border-width) solid var(--white);
 }
@@ -96,129 +98,161 @@
 
 /*** patterns ***/
 .patterned-bg {
-    border: .2rem solid var(--black);
-    border-bottom-width: 0;
-    border-right-width: 0;
+    --bg-size: 1.5rem;
+
+    --bg-a: transparent;
+    --bg-b: transparent;
+
+    --bg-plaid-img-1: linear-gradient(to right,
+            var(--bg-b) 5%,
+            transparent 5%);
+    --bg-plaid-img-2: linear-gradient(to bottom,
+            var(--bg-b) 5%,
+            transparent 5%);
+    --bg-plaid-img-3: linear-gradient(to right,
+            color-mix(in oklab, var(--bg-a), transparent) 50%,
+            transparent 50%);
+    --bg-plaid-img-4: linear-gradient(to bottom,
+            color-mix(in oklab, var(--bg-a), transparent) 50%,
+            transparent 50%);
+    --bg-plaid-position-1: calc(var(--bg-size)/4) 0;
+    --bg-plaid-position-2: 0 calc(var(--bg-size)/4);
+    --bg-plaid-position-3: 0 0;
+    --bg-plaid-size-1: var(--bg-size);
+    --bg-plaid-size-2: var(--bg-size) var(--bg-size);
+    --bg-plaid: var(--bg-plaid-img-1) var(--bg-plaid-position-1) / var(--bg-plaid-size-1),
+        var(--bg-plaid-img-2) var(--bg-plaid-position-2) / var(--bg-plaid-size-2),
+        var(--bg-plaid-img-3) var(--bg-plaid-position-3) / var(--bg-plaid-size-1),
+        var(--bg-plaid-img-4) var(--bg-plaid-position-3) / var(--bg-plaid-size-2);
+
+    --bg-polka-dots-img-1: radial-gradient(
+                var(--bg-a) 34%, transparent 36%);
+    --bg-polka-dots-img-2: radial-gradient(
+                var(--bg-a) 34%, transparent 36%);
+    --bg-polka-dots-position-1: 0 0;
+    --bg-polka-dots-position-2: calc(var(--bg-size)/2) calc(var(--bg-size)/2);
+    --bg-polka-dots-size: var(--bg-size) var(--bg-size);
+    --bg-polka-dots-color: var(--bg-b);
+    --bg-polka-dots: var(--bg-polka-dots-img-1) var(--bg-polka-dots-position-1) / var(--bg-polka-dots-size),
+        var(--bg-polka-dots-img-2) var(--bg-polka-dots-position-2) / var(--bg-polka-dots-size) var(--bg-polka-dots-color);
+
+    --bg-chevron-img-1: linear-gradient(135deg, var(--bg-a) 25%, transparent 25%);
+    --bg-chevron-img-2: linear-gradient(225deg, var(--bg-a) 25%, transparent 25%);
+    --bg-chevron-img-3: linear-gradient(315deg, var(--bg-a) 25%, transparent 25%);
+    --bg-chevron-img-4: linear-gradient(45deg, var(--bg-a) 25%, transparent 25%);
+    --bg-chevron-position-1: calc(var(--bg-size)/2) 0;
+    --bg-chevron-position-2: 0 0;
+    --bg-chevron-size: var(--bg-size) var(--bg-size);
+    --bg-chevron-color: var(--bg-b);
+    --bg-chevron: var(--bg-chevron-img-1) var(--bg-chevron-position-1) / var(--bg-chevron-size),
+        var(--bg-chevron-img-2) var(--bg-chevron-position-1) / var(--bg-chevron-size),
+        var(--bg-chevron-img-3) var(--bg-chevron-position-2) / var(--bg-chevron-size),
+        var(--bg-chevron-img-4) var(--bg-chevron-position-2) / var(--bg-chevron-size) var(--bg-chevron-color);
+
+    --bg-check-img-1: linear-gradient(to right,
+            var(--bg-a) 19%,
+            transparent 20%);
+    --bg-check-img-2: linear-gradient(to bottom,
+        var(--bg-a) 19%,
+        transparent 20%);
+    --bg-check-position-1: calc(var(--bg-size)/4) 0;
+    --bg-check-position-2: 0 calc(var(--bg-size)/4);
+    --bg-check-size-1: calc(var(--bg-size)/2);
+    --bg-check-size-2: calc(var(--bg-size)/2) calc(var(--bg-size)/2);
+    --bg-check-color: var(--bg-b);
+    --bg-check: var(--bg-check-img-1) var(--bg-check-position-1) / var(--bg-check-size-1),
+        var(--bg-check-img-2) var(--bg-check-position-2) / var(--bg-check-size-2) var(--bg-check-color);
+
+    --bg-stripe-img-1: linear-gradient(to right,
+        transparent 70%,
+        var(--bg-b) 70%,
+        var(--bg-b) 80%,
+        transparent 80%);
+    --bg-stripe-img-2: linear-gradient(to right,
+        var(--bg-a) 50%,
+        transparent 50%);
+    --bg-stripe-position: 0 0;
+    --bg-stripe-size: var(--bg-size);
+    --bg-stripe: var(--bg-stripe-img-1) var(--bg-stripe-position) / var(--bg-stripe-size),
+        var(--bg-stripe-img-2) var(--bg-stripe-position) / var(--bg-stripe-size);
+
     position: relative;
-    width: 100%;
 }
 
 .patterned-bg:before {
     content: "";
     display: block;
     inset: 0;
+    pointer-events: none;
     position: absolute;
 }
 
-.neon-pink-a {
+.patterned-bg.neon-pink-a {
     --bg-a: var(--neon-pink);
 }
 
-.neon-pink-b {
+.patterned-bg.neon-pink-b {
     --bg-b: var(--neon-pink);
 }
 
-.soft-blush-a {
+.patterned-bg.soft-blush-a {
     --bg-a: var(--soft-blush);
 }
 
-.soft-blush-b {
+.patterned-bg.soft-blush-b {
     --bg-b: var(--soft-blush);
 }
 
-.midnight-blue-a {
+.patterned-bg.midnight-blue-a {
     --bg-a: var(--midnight-blue);
 }
 
-.midnight-blue-b {
+.patterned-bg.midnight-blue-b {
     --bg-b: var(--midnight-blue);
 }
 
-.tropical-mint-a {
+.patterned-bg.tropical-mint-a {
     --bg-a: var(--tropical-mint);
 }
 
-.tropical-mint-b {
+.patterned-bg.tropical-mint-b {
     --bg-b: var(--tropical-mint);
 }
 
-.yellow-a {
+.patterned-bg.yellow-a {
     --bg-a: var(--yellow);
 }
 
-.yellow-b {
+.patterned-bg.yellow-b {
     --bg-b: var(--yellow);
 }
 
-.white-a {
+.patterned-bg.white-a {
     --bg-a: var(--white);
 }
 
-.white-b {
+.patterned-bg.white-b {
     --bg-b: var(--white);
 }
 
 .plaid-bg {
-    background-image: linear-gradient(to right,
-            var(--bg-b) 5%,
-            transparent 5%),
-        linear-gradient(to bottom,
-            var(--bg-b) 5%,
-            transparent 5%),
-        linear-gradient(to right,
-            color-mix(in oklab, var(--bg-a), transparent) 50%,
-            transparent 50%),
-        linear-gradient(to bottom,
-            color-mix(in oklab, var(--bg-a), transparent) 50%,
-            transparent 50%);
-    background-size: var(--bg-size), var(--bg-size) var(--bg-size), var(--bg-size), var(--bg-size) var(--bg-size);
-    background-position: calc(var(--bg-size)/4) 0, 0 calc(var(--bg-size)/4), 0 0;
+    background: var(--bg-plaid);
 }
 
 .polka-dots-bg {
-    background-color: var(--bg-b);
-    background-image: radial-gradient(
-            var(--bg-a) 34%, transparent 36%),
-        radial-gradient(
-            var(--bg-a) 34%, transparent 36%);
-    background-size: var(--bg-size) var(--bg-size);
-    background-position: 0 0, calc(var(--bg-size)/2) calc(var(--bg-size)/2);
+    background: var(--bg-polka-dots);
 }
 
 .chevron-bg {
-    background-color: var(--bg-b);
-    background-image:
-        linear-gradient(135deg, var(--bg-a) 25%, transparent 25%),
-        linear-gradient(225deg, var(--bg-a) 25%, transparent 25%),
-        linear-gradient(315deg, var(--bg-a) 25%, transparent 25%),
-        linear-gradient(45deg, var(--bg-a) 25%, transparent 25%);
-    background-size: var(--bg-size) var(--bg-size);
-    background-position: calc(var(--bg-size)/2) 0, calc(var(--bg-size)/2) 0, 0 0, 0 0;
+    background: var(--bg-chevron);
 }
 
 .check-bg {
-    background-color: var(--bg-b);
-    background-image: linear-gradient(to right,
-            var(--bg-a) 19%,
-            transparent 20%),
-        linear-gradient(to bottom,
-            var(--bg-a) 19%,
-            transparent 20%);
-    background-size: calc(var(--bg-size)/2), calc(var(--bg-size)/2) calc(var(--bg-size)/2);
-    background-position: calc(var(--bg-size)/4) 0, 0 calc(var(--bg-size)/4);
+    background: var(--bg-check);
 }
 
 .stripe-bg {
-    background-image: linear-gradient(to right,
-            transparent 70%,
-            var(--bg-b) 70%,
-            var(--bg-b) 80%,
-            transparent 80%),
-        linear-gradient(to right,
-            var(--bg-a) 50%,
-            transparent 50%);
-    background-size: var(--bg-size), var(--bg-size);
-    background-position: 0 0, 0 0;
+    background: var(--bg-stripe);
 }
 
 .flowers-bg {
@@ -299,6 +333,14 @@ a.lockup {
 .patchwork {
     display: flex;
     width: 100%;
+
+    .patterned-bg {
+        border: .2rem solid var(--black);
+        border-bottom-width: 0;
+        border-right-width: 0;
+        position: relative;
+        width: 100%;
+    }
 }
 
 .patchwork:first-of-type {
@@ -313,6 +355,22 @@ a.lockup {
     .patterned-bg:last-of-type {
         width: 50%;
     }
+}
+
+header {
+    margin-top: -1.5rem;
+}
+
+.patchwork {
+    height: 2.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap:5rem;
+    margin: 2.5rem auto;
+    max-width: 80vw;
 }
 
 @media screen and (orientation: landscape) {
@@ -354,45 +412,29 @@ a.lockup {
     }
 }
 
-@media screen and (orientation: portrait) {
-    header {
-        margin-top: -1.5rem;
-    }
-
-    .patchwork {
-        height: 2.5rem;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        gap:5rem;
-        margin: 2.5rem auto;
-        max-width: 80vw;
-    }
-}
-
-.kookyBorder {
-    height: 100%;
-    inset: 1rem;
+.kooky-border {
+    inset: 0;
     pointer-events: none;
     position: absolute;
-    transform: translateY(-.5rem);
     z-index: 0;
 }
 
-.outline {
-    outline-offset: calc(var(--border-width) * -2);
+.patterned-bg .kooky-border {
+    inset: 2rem;
 }
 
+/*.outline {
+    outline-offset: calc(var(--border-width) * -2);
+}*/
+
 /*** index ***/
-.content:has(.kookyBorder) {
+.content:has(.kooky-border) {
     padding: 0 2rem 2rem;
     position: relative;
     text-align: center;
 }
 
-.content:has(.kookyBorder) h2 {
+.content h2 {
     display: inline-block;
     font-weight: 900;
     line-height: 1;
@@ -403,19 +445,63 @@ a.lockup {
     z-index: 1;
 }
 
-.content:has(.kookyBorder) p {
+.content:has(.kooky-border) p {
     padding: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.services-accordion {
+    --bg-a: var(--tropical-mint);
+    --bg-b: var(--white);
+    padding: 1rem;
+    transition: background .2s ease-out;
+}
+
+.services-accordion:has(details:nth-of-type(1):open) {
+    background: var(--bg-check);
+}
+
+.services-accordion:has(details:nth-of-type(2):open) {
+    background: var(--bg-polka-dots);
+}
+
+.services-accordion:has(details:nth-of-type(3):open) {
+    --bg-b: var(--tropical-mint);
+    --bg-a: var(--white);
+    background: var(--bg-stripe);
+}
+
+.services-accordion:has(details:nth-of-type(4):open) {
+    --bg-b: var(--tropical-mint);
+    --bg-a: var(--white);
+    background: var(--bg-plaid);
+}
+
+.services-accordion:has(details:nth-of-type(5):open) {
+    background-color: var(--tropical-mint);
+}
+
+.services-accordion:has(details:nth-of-type(6):open) {
+    background-color: var(--white);
 }
 
 details {
-    margin: 0 2rem;
+    margin: 0 0 1rem;
+}
+
+details:last-of-type {
+    margin: 0;
 }
 
 .service-summary {
-    border-width: 0 0 var(--border-width) 0;
     font-weight: 900;
     padding: .25em .4em;
     text-transform: uppercase;
+}
+
+summary:hover, summary:active {
+    cursor: pointer;
 }
 
 summary::marker {

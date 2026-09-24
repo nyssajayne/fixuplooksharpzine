@@ -6,6 +6,11 @@
             "desc": "Let me mend and alter your favourite clothes so that they can work for you.  Check out my price list, come visit me at a happy hour, or get in touch to get all your questions answered."
         },
         {
+            "service": "Custom Garments",
+            "keyword": "custom",
+            "desc": "I've made my own clothes for over a decade, now it's time for me to make clothes for you!  Whether it's a special occassion or some just some everyday staples, the clothes I make for you will look great, are washable, and most of all, will fit you!"
+        },
+        {
             "service": "Group parties",
             "keyword": "groupParties",
             "desc": "In the style of our parents' tupperware parties, get your crew together and we'll fix some things! I'll demo some basic fixes (and, of course, tailor your clothes).  Learn more!"

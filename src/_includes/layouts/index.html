@@ -5,7 +5,7 @@
     {% include 'partials/topbar.html' %}
     <div class="patchwork">
         <div class="patterned-bg leopard-print-bg neon-pink-a yellow-b"></div>
-        <div class="patterned-bg plaid-bg tropical-mint-a yellow-b"></div>
+        <div class="patterned-bg tropical-mint-a yellow-b plaid-bg"></div>
         <div class="patterned-bg polka-dots-bg midnight-blue-a white-b"></div>
         <div class="patterned-bg ferns-bg tropical-mint-a midnight-blue-b"></div>
         <div class="patterned-bg check-bg white-a soft-blush-b"></div>
@@ -14,7 +14,7 @@
         <div class="patterned-bg stripe-bg midnight-blue-a neon-pink-b"></div>
         <div class="patterned-bg flowers-bg soft-blush-a neon-pink-b"></div>
         <div class="patterned-bg chevron-bg yellow-a tropical-mint-b"></div>
-        <div class="patterned-bg plaid-bg neon-pink-a yellow-b"></div>
+        <div class="patterned-bg neon-pink-a yellow-b plaid-bg"></div>
         <div class="patterned-bg polka-dots-bg white-a tropical-mint-b"></div>
     </div>
     <header>
@@ -22,30 +22,32 @@
     </header>
     <main>
         <section class="content intro">
-            <h2 class="bg-color-one border-color-three box-shadow-color-one">Need a crafty friend?  Look no further!</h2>
-            <p class="bg-color-one border-color-five box-shadow-color-one">I'm Nyssa, and I am here to help you with all those buttons you need sewing on, trousers that need hemming, holes in your clothes that need patching... I can even take a look at your sewing machine and finish your hand made sweaters.</p>
-            <div class="rotate-left kookyBorder border-color-four"></div>
-            <div class="rotate-right kookyBorder border-color-six"></div>
+            <h2 class="bg-color-one border-color-three">Need a crafty friend?  Look no further!</h2>
+            <p class="bg-color-one border-color-five">I'm Nyssa, and I am here to help you with all those buttons you need sewing on, trousers that need hemming, holes in your clothes that need patching... I can even take a look at your sewing machine and finish your hand made sweaters.</p>
+            <div class="rotate-left kooky-border border-color-four"></div>
+            <div class="rotate-right kooky-border border-color-three"></div>
         </section>
 
-        <section class="content larger-font-size flyer">
+        <section class="content larger-font-size flyer patterned-bg polka-dots-bg midnight-blue-b neon-pink-a border-color-two">
             {% set flyer = flyers.starlight %}
             {% include 'partials/flyer.html' %}
             {{ content | safe }}
-            <div class="rotate-right kookyBorder border-color-four"></div>
-            <div class="rotate-left kookyBorder border-color-three"></div>
+            <div class="rotate-right kooky-border border-color-three bg-color-one"></div>
+            <div class="rotate-left kooky-border border-color-four"></div>
         </section>
 
         <section class="content services">
             <h2 class="bg-color-one border-color-three">Services</h2>
-            {% for service in services.services %}
-            <details name="services" class="{{ service.keyword }}">
-                <summary class="service-summary border-color-five">{{ service.service }}</summary>
-                <p>{{ service.desc }}</p>
-            </details>
-            {% endfor %}
-            <div class="rotate-right kookyBorder border-color-four"></div>
-            <div class="rotate-left kookyBorder border-color-three"></div>
+            <div class="services-accordion patterned-bg border-color-five">
+                {% for service in services.services %}
+                <details name="services" class="{{ service.keyword }} border-color-five bg-color-six">
+                    <summary class="service-summary">{{ service.service }}</summary>
+                    <p>{{ service.desc }}</p>
+                </details>
+                {% endfor %}
+            </div>
+            <div class="rotate-right kooky-border border-color-four"></div>
+            <div class="rotate-left kooky-border border-color-three"></div>
         </section>
     </main>
     {% include 'partials/socials.html' %}

@@ -1,9 +1,5 @@
-.prices h2, .prices h3 {
-    text-align: center;
-}
-
-.prices h2 {
-    margin-bottom: 1rem;
+.prices span {
+    line-height: 1;
 }
 
 .prices ul {

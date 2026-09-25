@@ -1,13 +1,14 @@
-main {
-    align-items: start;
-    gap: 2rem;
-    display: grid;
-    grid-template-areas:
-    "intro flyer"
-    "services flyer";
-    grid-template-columns: 1fr 25rem;
-    grid-template-rows: auto;
-    padding: 2rem;
+@media screen and (orientation: landscape) {
+    main {
+        align-items: start;
+        gap: 2rem;
+        display: grid;
+        grid-template-areas:
+        "intro flyer"
+        "services flyer";
+        grid-template-columns: 1fr 25rem;
+        grid-template-rows: auto;
+    }
 }
 
 .services-accordion {

@@ -371,6 +371,7 @@ main {
     gap: 5rem;
     margin: 2.5rem auto;
     max-width: calc(100% - 2rem);
+    padding: 2rem;
 }
 
 @media screen and (orientation: landscape) {

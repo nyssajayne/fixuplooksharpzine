@@ -2,12 +2,8 @@
 title: 'Fix Up, Look Sharp! | Zine & Happy Hour'
 layout: 'layouts/services.html'
 cssFile: "../services.css"
-service: 'Prices'
+service: 'Finishing Services'
 ---
-<ul>
-{% for item in prices.prices %}
-<li><span class="alt">{{ item.alt | safe }}</span> <span class="price">{{ item.price }}</span></li>
-{% endfor %}
-</ul>
+<p>Let me do the boring work of finishing your knitting and crochet.</p>
 <div class="rotate-right kooky-border border-color-four"></div>
 <div class="rotate-left kooky-border border-color-three"></div>

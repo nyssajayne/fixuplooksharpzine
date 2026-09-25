@@ -5,6 +5,8 @@
 
     --black: rgba(0, 0, 0, 0.87);
     --white: #FFFFFC;
+
+    --default-font-size: calc(1rem + 0.5vw);
 }
 
 .font-dm-sans {
@@ -45,6 +47,10 @@ strong {
 img {
     height: auto;
     width: 100%;
+}
+
+body {
+    font-size: var(--default-font-size);
 }
 
 header {
@@ -199,10 +205,6 @@ aside {
 }
 
 @media (orientation: portrait) {
-    .wrapper {
-        
-    }
-
     nav {
         display: none;
     }

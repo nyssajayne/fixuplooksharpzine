@@ -11,6 +11,30 @@
     </head>
 
     <body class="text-color-two text-primary-font">
-        {% block content %}{% endblock %}
+        <div class="wrapper">
+            {% include 'partials/topbar.html' %}
+            <div class="patchwork">
+                <div class="patterned-bg leopard-print-bg neon-pink-a yellow-b"></div>
+                <div class="patterned-bg tropical-mint-a yellow-b plaid-bg"></div>
+                <div class="patterned-bg polka-dots-bg midnight-blue-a white-b"></div>
+                <div class="patterned-bg ferns-bg tropical-mint-a midnight-blue-b"></div>
+                <div class="patterned-bg check-bg white-a soft-blush-b"></div>
+            </div>
+             <div class="patchwork">
+                <div class="patterned-bg stripe-bg midnight-blue-a neon-pink-b"></div>
+                <div class="patterned-bg flowers-bg soft-blush-a neon-pink-b"></div>
+                <div class="patterned-bg chevron-bg yellow-a tropical-mint-b"></div>
+                <div class="patterned-bg neon-pink-a yellow-b plaid-bg"></div>
+                <div class="patterned-bg polka-dots-bg white-a tropical-mint-b"></div>
+            </div>
+            <header>
+                <a href="/" class="lockup">{% include 'partials/logo.html' %}</a>
+            </header>
+            <main>
+                {% block content %}{% endblock %}
+            </main>
+
+            {% include 'partials/socials.html' %}
+        </div>
     </body>
 </html>

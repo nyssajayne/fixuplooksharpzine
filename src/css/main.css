@@ -368,9 +368,9 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    gap:5rem;
+    gap: 5rem;
     margin: 2.5rem auto;
-    max-width: 80vw;
+    max-width: calc(100% - 2rem);
 }
 
 @media screen and (orientation: landscape) {
@@ -384,18 +384,6 @@ main {
 
     .patchwork {
         height: 5rem;
-    }
-
-    main {
-        align-items: start;
-        gap: 2rem;
-        display: grid;
-        grid-template-areas:
-        "intro flyer"
-        "services flyer";
-        grid-template-columns: 1fr 25rem;
-        grid-template-rows: auto;
-        padding: 2rem;
     }
 
     main .intro {
@@ -428,16 +416,16 @@ main {
 }*/
 
 /*** index ***/
-.content:has(.kooky-border) {
+*:has(> .kooky-border) {
     padding: 0 2rem 2rem;
     position: relative;
     text-align: center;
 }
 
-.content h2 {
+*:has(> .kooky-border) h2 {
     display: inline-block;
     font-weight: 900;
-    line-height: 1;
+    line-height: .8;
     margin: -1rem 0 1rem;
     padding: .25em .4em;
     position: relative;
@@ -445,65 +433,8 @@ main {
     z-index: 1;
 }
 
-.content:has(.kooky-border) p {
+*:has(> .kooky-border) p {
     padding: 1rem;
     position: relative;
     z-index: 2;
-}
-
-.services-accordion {
-    --bg-a: var(--tropical-mint);
-    --bg-b: var(--white);
-    padding: 1rem;
-    transition: background .2s ease-out;
-}
-
-.services-accordion:has(details:nth-of-type(1):open) {
-    background: var(--bg-check);
-}
-
-.services-accordion:has(details:nth-of-type(2):open) {
-    background: var(--bg-polka-dots);
-}
-
-.services-accordion:has(details:nth-of-type(3):open) {
-    --bg-b: var(--tropical-mint);
-    --bg-a: var(--white);
-    background: var(--bg-stripe);
-}
-
-.services-accordion:has(details:nth-of-type(4):open) {
-    --bg-b: var(--tropical-mint);
-    --bg-a: var(--white);
-    background: var(--bg-plaid);
-}
-
-.services-accordion:has(details:nth-of-type(5):open) {
-    background-color: var(--tropical-mint);
-}
-
-.services-accordion:has(details:nth-of-type(6):open) {
-    background-color: var(--white);
-}
-
-details {
-    margin: 0 0 1rem;
-}
-
-details:last-of-type {
-    margin: 0;
-}
-
-.service-summary {
-    font-weight: 900;
-    padding: .25em .4em;
-    text-transform: uppercase;
-}
-
-summary:hover, summary:active {
-    cursor: pointer;
-}
-
-summary::marker {
-    content: "";
 }

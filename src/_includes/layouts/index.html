@@ -43,6 +43,7 @@
                 <details name="services" class="{{ service.keyword }} border-color-five bg-color-six">
                     <summary class="service-summary">{{ service.service }}</summary>
                     <p>{{ service.desc }}</p>
+                    <div class="rotate-{% if loop.index % 2 == 0 %}left{% else %}right{% endif %} kooky-border border-color-one"></div>
                 </details>
                 {% endfor %}
             </div>

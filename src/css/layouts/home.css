@@ -1,0 +1,75 @@
+main {
+    align-items: start;
+    gap: 2rem;
+    display: grid;
+    grid-template-areas:
+    "intro flyer"
+    "services flyer";
+    grid-template-columns: 1fr 25rem;
+    grid-template-rows: auto;
+    padding: 2rem;
+}
+
+.services-accordion {
+    --bg-a: var(--tropical-mint);
+    --bg-b: var(--white);
+    padding: 1rem;
+    transition: background .2s ease-out;
+    transform-origin: center;
+}
+
+.services-accordion:has(details:nth-of-type(1):open) {
+    background: var(--bg-check);
+}
+
+.services-accordion:has(details:nth-of-type(2):open) {
+    background: var(--bg-polka-dots);
+}
+
+.services-accordion:has(details:nth-of-type(3):open) {
+    --bg-b: var(--tropical-mint);
+    --bg-a: var(--white);
+    background: var(--bg-stripe);
+}
+
+.services-accordion:has(details:nth-of-type(4):open) {
+    --bg-b: var(--tropical-mint);
+    --bg-a: var(--white);
+    background: var(--bg-plaid);
+}
+
+.services-accordion:has(details:nth-of-type(5):open) {
+    background-color: var(--tropical-mint);
+}
+
+.services-accordion:has(details:nth-of-type(6):open) {
+    background-color: var(--white);
+}
+
+.services-accordion details {
+    margin: 0 0 1rem;
+    padding: 0;
+    position: relative;
+}
+
+.services-accordion .kooky-border {
+    inset: -.5rem;
+}
+
+details:last-of-type {
+    margin: 0;
+}
+
+.service-summary {
+    font-weight: 900;
+    padding: .25em .4em;
+    text-transform: uppercase;
+}
+
+summary:hover, summary:active {
+    cursor: pointer;
+}
+
+summary::marker {
+    content: '▿';
+}

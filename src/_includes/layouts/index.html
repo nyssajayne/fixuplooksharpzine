@@ -19,12 +19,13 @@
     <h2 class="bg-color-one border-color-three">Services</h2>
     <div class="services-accordion patterned-bg border-color-five">
         {% for service in services.services %}
+        {% if service.live === true %}
         <details name="services" class="{{ service.keyword }} border-color-five bg-color-six">
             <summary class="service-summary">{{ service.service }}</summary>
-            <p>{{ service.desc }}</p>
+            <p>{{ service.shortdesc | safe }}</p>
             <div class="rotate-{% if loop.index % 2 == 0 %}left{% else %}right{% endif %} kooky-border border-color-one"></div>
         </details>
-        {% endfor %}
+        {% endif %}{% endfor %}
     </div>
     <div class="rotate-right kooky-border border-color-four"></div>
     <div class="rotate-left kooky-border border-color-three"></div>

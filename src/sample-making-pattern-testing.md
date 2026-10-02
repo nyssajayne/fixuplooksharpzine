@@ -2,10 +2,10 @@
 title: 'Fix Up, Look Sharp! | Zine & Happy Hour'
 layout: 'layouts/services.html'
 cssFile: "../services.css"
-service: 'Custom Garments'
+service: 'Sample Making & Pattern Testing'
 ---
 {% for service in services.services %}
-{% if service.keyword === "custom" %}
+{% if service.keyword === "sampleMaking" %}
 <p>{{ service.longdesc }}</p>
 {% endif %}{% endfor %}
 <div class="rotate-right kooky-border border-color-four"></div>

@@ -4,6 +4,9 @@ layout: 'layouts/services.html'
 cssFile: "../services.css"
 service: 'Finishing Services'
 ---
-<p>Let me do the boring work of finishing your knitting and crochet.</p>
+{% for service in services.services %}
+{% if service.keyword === "finishing" %}
+<p>{{ service.longdesc }}</p>
+{% endif %}{% endfor %}
 <div class="rotate-right kooky-border border-color-four"></div>
 <div class="rotate-left kooky-border border-color-three"></div>

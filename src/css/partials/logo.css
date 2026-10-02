@@ -7,10 +7,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 .logo .row {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: .25rem;
@@ -18,9 +19,6 @@
 }
 
 .logo span {
-    background-color: var(--neon-pink);
-    border: .3rem solid var(--midnight-blue);
-    box-shadow: -.1rem .1rem 0 0 var(--soft-blush) ;
     color: var(--yellow);
     display: inline-block;
     font-weight: 900;
@@ -30,10 +28,35 @@
     width: auto;
 }
 
+.logo span:first-of-type {
+    position: relative;
+    z-index: 1;
+}
+
 .logo .large-font-size {
     font-size: 2.4rem;
 }
 
 .logo .small-font-size {
     font-size: 1.2rem;
+    color: var(--midnight-blue);
+    padding-bottom: 0;
+}
+
+.logo svg {
+    color: var(--tropical-mint);
+    width: .75rem;
+}
+
+.subheadline {
+    border-width: 0 0 .3rem 0;
+    margin-bottom: .2rem;
+    padding-bottom: .2rem;
+}
+
+.logo hr {
+    border-width: 0 0 var(--border-width) 0;
+    color: var(--tropical-mint);
+    margin: .5rem auto 0;
+    width: 50vw;
 }

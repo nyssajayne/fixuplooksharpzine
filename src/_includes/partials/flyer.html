@@ -7,12 +7,14 @@
 {{ flyer.address }} (<a href="{{ location }}">see map</a>)<br>
 
 {% set week = 0 %}
-between <strong class="text-color-three">{{ flyer.time }}</strong> on <strong id="thisweek" class="text-color-three">{{ happyhour.whichDate(flyer.day, week) }}</strong>.</p>
+between <strong class="text-color-three">{{ flyer.time }}</strong> on <strong id="thisweek" data-day="{{ flyer.day }}" class="text-color-three"></strong>.</p>
 
 <p>Nyssa will fix your clothes<br>
 while {{ flyer.bartender }} fixes your drinks!</p>
 
 {% set week = 7 %}
-<p>Simple alterations while-u-wait, more complicated alterations available for pickup on <span id="nextweek">{{ happyhour.whichDate(flyer.day, week) }}</span>.</p>
+<p>Simple alterations while-u-wait, more complicated alterations available for pickup on <span id="nextweek" data-day="{{ flyer.day }}"></span>.</p>
 
 <p class="small-font-size">Cash or Venmo only. See <a href="/prices">prices</a>.</p>
+
+<script src="js/happyhour.js"></script>

@@ -7,18 +7,24 @@ function calcDate(day, week) {
     return thurs;
 }
 
-export function whichDate(day, week) {
+function whichDate(day, week) {
     const month = calcDate(day, week).getMonth();
     const date = calcDate(day, week).getDate();
     const dayNames = [
-        "Sunday", 
-        "Monday", 
+        "Sunday",
+        "Monday",
         "Tuesday",
         "Wednesday",
         "Thursday",
         "Friday",
         "Saturday"];
-    const dayName = calcDate(day, week).getDay();
+  const dayName = calcDate(day, week).getDay();
 
-    return `${dayNames[dayName]} ${month + 1}/${date}`
+  return `${dayNames[dayName]} ${month + 1}/${date}`
 }
+
+const thisweek = document.getElementById("thisweek");
+thisweek.innerText = whichDate(thisweek.dataset.day, 0)
+
+const nextweek = document.getElementById("nextweek");
+nextweek.innerText = whichDate(nextweek.dataset.day, 1)

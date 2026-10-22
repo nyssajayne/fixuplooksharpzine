@@ -27,4 +27,4 @@ const thisweek = document.getElementById("thisweek");
 thisweek.innerText = whichDate(thisweek.dataset.day, 0)
 
 const nextweek = document.getElementById("nextweek");
-nextweek.innerText = whichDate(nextweek.dataset.day, 1)
+nextweek.innerText = whichDate(nextweek.dataset.day, 7)
